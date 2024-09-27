@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import '../Styles/About.css';
-import Header from "../components/Home/Header";
-import Footer from "../components/Home/Footer";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const quotes = [
   "The world is a book and those who do not travel read only one page.",

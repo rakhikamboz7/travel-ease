@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 
-import Header from '../components/Home/Header';
-import SearchBar from '../components/Home/SearchBar';
-import Offers from '../components/Home/Offes'; // Fixed typo from Offers to Offers
-import PopularHotels from '../components/Home/PopularHotels';
-import Footer from '../components/Home/Footer';
+import Header from '../components/Header';
+import SearchBar from '../components/SearchBar';
+import Offers from '../components/Offers'; // Fixed typo from Offers to Offers
+import PopularHotels from '../components/PopularHotels';
+import Footer from '../components/Footer';
 import '../Styles/HomePage.css';
 
 const Homepage = () => {

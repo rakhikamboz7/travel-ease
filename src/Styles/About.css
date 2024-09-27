@@ -1,0 +1,184 @@
+.about-container {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .about-header {
+    position: relative;
+    background-image: url('../assets/6345959.jpg');
+    background-size: cover;
+    border-radius: 30px;
+    background-position: center;
+    height: 450px;
+    width:100%; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .quote-section {
+    position: absolute;
+    text-align: center;
+    top:-150px;
+    color: rgb(14, 14, 150); /* Dark blue color */
+    font-size: 0.5em;
+    font-weight: bold;
+    padding-block-end: 5px;
+    background-color: rgba(255, 255, 255, 0.8); /* If you want a semi-transparent background for readability */
+    border-radius: 5px;
+  }
+  
+  .quote {
+    margin: 0;
+  }
+  
+    
+  
+  
+  h2 .overlay-text {
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(122, 11, 11);
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+  .more-info{
+    position: relative;
+    margin-top: 300px;
+    align-content: center;
+  }
+  .about-content {
+    text-align: center;
+    margin: 30px 0;
+  }
+  
+  .quote-section {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 250px;  
+    color: #3975b5;
+    animation: fadeIn 2.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .learn-more-btn {
+    background-color: #ff6347;
+    color: white;
+    margin-top: 140px;
+    border: none;
+    align-content: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .learn-more-btn:hover {
+    background-color: #ff4500;
+  }
+  
+  .history-section {
+    background-color: #e195c897;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+  }
+  
+  .contact-section {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .contact-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .about-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .history-section {
+    margin-top: 50px;
+  }
+  
+  .history-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .flip-card {
+    background-color: transparent;
+    width: 250px;
+    height: 150px;
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .flip-card-front {
+    background-color: #f1f1f1;
+    color: black;
+  }
+  
+  .flip-card-back {
+    background-color: #4c98af;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .history-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
