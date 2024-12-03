@@ -1,12 +1,12 @@
 // src/components/Footer.js
 import React from 'react';
- // Importing styles
+import '../Styles/Footer.css';
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-newsletter">
-        <h2>Subscribe to our Newsletter</h2>
+        <h3>Subscribe to our Newsletter</h3>
         <div className="newsletter-input">
           <input type="email" placeholder="Enter your email" />
           <button>Subscribe</button>

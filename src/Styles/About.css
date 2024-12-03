@@ -1,18 +1,22 @@
 .about-container {
-    max-width: 1200px;
-    margin: 100px auto;
-    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+    overflow-x: hidden;  
     font-family: Arial, sans-serif;
   }
+
   
+
   .about-header {
     position: relative;
+    margin-left:30px;
+    margin-top: 60px;
     background-image: url('../assets/6345959.jpg');
     background-size: cover;
     border-radius: 30px;
-    background-position: center;
+    /* background-position:; */
     height: 450px;
-    width:100%; /* Adjust as needed */
+    width:95%; /* Adjust as needed */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,37 +25,42 @@
   .quote-section {
     position: absolute;
     text-align: center;
-    top:-150px;
+    bottom:220px;
     color: rgb(14, 14, 150); /* Dark blue color */
-    font-size: 0.5em;
+    font-size: 0.5rem;
     font-weight: bold;
-    padding-block-end: 5px;
+    padding: 5px;
     background-color: rgba(255, 255, 255, 0.8); /* If you want a semi-transparent background for readability */
     border-radius: 5px;
   }
   
-  .quote {
+  /* .quote {
     margin: 0;
   }
-  
+   */
     
   
   
-  h2 .overlay-text {
-    position: absolute;
-    top: 400px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(122, 11, 11);
-    font-size: 2rem;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px 20px;
-    border-radius: 10px;
+.overlay-text {
+  position: relative;
+    margin-top: 600px;
+    color:white;
+    font-size: 1.5rem;
+    margin-left: 100px;
+    background-color:  rgb(222, 57, 104);
+    padding: 15px;
+    border-radius: 5px;
   }
   .more-info{
-    position: relative;
-    margin-top: 300px;
-    align-content: center;
+    position: absolute;
+    margin-top: 80px;
+    margin-right: 100px;
+    color: #060404;
+    font-size: 1.5rem;
+    font-family: jost;
+    margin-left: -500px;
+    text-align: justify;
+    
   }
   .about-content {
     text-align: center;
@@ -59,9 +68,9 @@
   }
   
   .quote-section {
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-align: center;
-    margin-top: 250px;  
+   
     color: #3975b5;
     animation: fadeIn 2.5s ease-in-out;
   }
@@ -74,7 +83,7 @@
   .learn-more-btn {
     background-color: #ff6347;
     color: white;
-    margin-top: 140px;
+    margin-top: 350px;
     border: none;
     align-content: center;
     padding: 10px 20px;
@@ -90,13 +99,17 @@
   .history-section {
     background-color: #e195c897;
     padding: 20px;
-    margin: 20px 0;
+    position: relative;
+    top: 80px;
+    
+    margin-left: 150px;
+    margin-right: 150px;
     border-radius: 10px;
   }
   
   .contact-section {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 100px;
   }
   
   .contact-btn {

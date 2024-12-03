@@ -37,7 +37,7 @@ const PopularHotels = () => {
 
     return (
         <div>
-            <h2>Popular Hotels</h2>
+            <h1>Popular Hotels</h1>
             <div className="hotel-grid">
                 {hotels.map(hotel => (
                     <div key={hotel.id} className="hotel-card">

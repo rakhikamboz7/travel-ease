@@ -38,10 +38,11 @@ const AboutUs = () => {
 
       <div className="about-container">
         <div className="about-header">
+        <p className="overlay-text">Empowering your journeys with seamless travel solutions.</p>
           <div className="quote-section">
             <p className="quote">{quotes[currentQuote]}</p>
           </div>
-          <h2 className="overlay-=text">Empowering your journeys with seamless travel solutions.</h2>
+          
           <button onClick={handleLearnMore} className="learn-more-btn">
             Learn More
           </button>
@@ -75,7 +76,7 @@ const AboutUs = () => {
                 </div>
                 <div className="flip-card-back">
                   <p>
-                    Our journey began in 2010 with the purpose of providing
+                    Our journey began in 2024 with the purpose of providing
                     hassle-free travel solutions for millions of travelers.
                   </p>
                 </div>

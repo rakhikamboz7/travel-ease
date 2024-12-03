@@ -5,7 +5,7 @@
   }
   
   body {
-    width: 100%; /* Full width of the viewport */
+    width: 100%; 
     margin: 0 auto;
     overflow-x: hidden; 
   
@@ -24,99 +24,6 @@
   }
   /* General Styling */
   
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    transition: all 0.3s ease;
-  }
-  
-  .logo-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #00A9E0;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-  
-  .logo:hover {
-    transform: scale(1.1); /* Scale effect */
-    color: #FF5733; /* Change color on hover */
-  }
-  
-  .nav-links {
-    display: flex;
-    gap: 20px;
-    margin-right:610px;
-  }
-  
-  .nav-link {
-    text-decoration: none;
-    font-size: 18px;
-    color: #333;
-    background: none;
-    border: none;
-    cursor: pointer;
-    position: relative;
-    transition: all 0.3s ease;
-  }
-  
-  .nav-link:hover::after {
-    content: '';
-    width: 100%;
-    height: 2px;
-    background-color: #00A9E0;
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-  }
-  
-  .nav-link.active::after {
-    content: '';
-    width: 100%;
-    height: 2px;
-    background-color: #00A9E0;
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-  }
-  
-  .nav-link.active {
-    color: #00A9E0;
-  }
-  
-  .auth-button {
-    display: flex;
-    align-items: center;
-  }
-  
-  .signup-btn {
-    background-color: #FF5733;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .signup-btn:hover {
-    background-color: #FF796E;
-    transform: scale(1.05);
-  }
   
   
   .searchbar-container {
@@ -207,8 +114,8 @@
   }
   .popular-hotels-container {
     background-color: #f7d7e3;
-    padding: 40px;
-    margin: -80px;
+    padding: 20px;
+    margin-top: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
@@ -244,12 +151,21 @@
     font-size: 1.2rem;
     color: #333;
   }
+  .why-travel-ease-container {
+    margin-top: 10px;
+    padding: 10px;
+   
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); 
+    transition: transform 0.3s ease-in-out;
+  }
   .why-travel-ease h1 {
     background-color: hsl(0, 65%, 97%);
     position: relative;
-    margin-top: 50px;
-    font-size: 2rem;
-    margin-bottom: 10px;
+    margin-top: 60px;
+    font-size: 1.5rem;
+ 
+    
   }
   
   .why-travel-ease h3 {
@@ -257,117 +173,10 @@
     line-height: 1.2;
   }
   
-  /* Footer.css */
-  /* src/components/Footer.css */
-  .footer {
-    background-color: #000;
-    color: #fff;
-    width: 1440px;
-    margin-left: -130px;
-    margin-bottom: -30%;
-    margin-top: 100px;
-  
-  padding: 30px;
-    text-align: center;
-    
-  }
-  
-  .footer-newsletter h2 {
-    margin-bottom: 0px;
-    font-size: 24px;
-  }
-  
-  .newsletter-input {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 40px;
-  }
-  
-  .newsletter-input input {
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: none;
-    width: 300px;
-  }
-  
-  .newsletter-input button {
-    padding: 10px 20px;
-    background-color: #ff6600;
-    color: white;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .footer-logo img {
-    height: 80px;
-  }
-  
-  .footer-links a {
-    margin-right: 300px;
-    text-decoration: none;
-    color: white;
-    gap: 10px;
-    font-size: 14px;
-  }
-  
-  .footer-links a:hover {
-    text-decoration: underline;
-  }
-  
-  .footer-line {
-    border: 1px solid white;
-    margin: 20px 0;
-  }
-  
-  .footer-socials {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-  }
-  
-  .social-icon {
-    font-size: 24px;
-    text-align: center;
-    color: white;
-    background-color: transparent;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 50%;
-    border: 1px solid white;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .social-icon:hover {
-    background-color: white;
-    color: #000;
-  }
-  
-  .facebook { background-color: #3b5998; color: #fff; }
-  .linkedin { background-color: #0077b5; color: #fff; }
-  .twitter { background-color: #1da1f2; color: #fff; }
-  .youtube { background-color: #ff0000; color: #fff; }
-  
+
   
   /* Container for the Why TravelEase section */
-  .why-travel-ease-container {
-    margin-top: 100px;
-    padding: 50px;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.9); /* Adding a semi-transparent background */
-    transition: transform 0.3s ease-in-out;
-  }
+
   
   /* Adding hover effects */
   .why-travel-ease-container:hover {
@@ -395,7 +204,7 @@
   }
   
   @keyframes slideUp {
-    from { transform: translateY(50px); opacity: 0; }
+    from { transform: translateY(20px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
   }
   
@@ -408,6 +217,7 @@
     border-radius: 5px;
     cursor: pointer;
     margin-top: 20px;
+    
     transition: background-color 0.3s ease;
   }
   
@@ -416,39 +226,122 @@
   }
   
   
-  .hotel-grid {
+  .search-container {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+  }
+  
+  .search-inputs {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .search-input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 200px;
+    font-size: 16px;
+  }
+  
+  .search-button {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .search-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .hotels-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
   }
   
   .hotel-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    background: white;
+    border-radius: 10px;
     overflow: hidden;
-    text-align: center;
-    background-color: #f9f9f9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+  
+  .hotel-card:hover {
+    transform: translateY(-5px);
   }
   
   .hotel-image {
     width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
   }
   
-  .hotel-details {
-    padding: 10px;
+  .hotel-info {
+    padding: 15px;
   }
   
-  .hotel-name span {
-    color: black;
+  .hotel-info h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+  }
+  
+  .location {
+    color: #666;
+    margin-bottom: 8px;
+  }
+  
+  .price {
     font-weight: bold;
+    color: #007bff;
+    margin-bottom: 8px;
   }
   
-  .hotel-address {
-    margin-top: 5px;
-    color: #555;
-    font-size: 0.9em;
+  .rating {
+    color: #ff9800;
+    margin-bottom: 8px;
   }
+  
+  .amenities {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+  }
+  
+  .amenity-tag {
+    background: #f0f0f0;
+    padding: 4px 8px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    color: #666;
+  }
+  
+  .description {
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.4;
+  }
+  
+  .loading, .error {
+    text-align: center;
+    padding: 20px;
+    grid-column: 1 / -1;
+  }
+  
+  .error {
+    color: red;
+  }
+  
+  

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../Styles/Header.css';
   // External CSS for styling
 
 const Header = () => {

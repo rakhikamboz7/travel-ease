@@ -22,7 +22,7 @@ const Offers = () => {
 
   return (
     <div className="offers-container">
-      <h2>OFFERS:</h2>
+      <h1>OFFERS:</h1>
       <Slider {...settings}>
         <div className="offer-card">
           <img src="/path-to-offer-image" alt="Offer 1" />

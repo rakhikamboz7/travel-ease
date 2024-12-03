@@ -4,10 +4,12 @@ import axios from 'axios';
 
 import Header from '../components/Header';
 import SearchBar from '../components/SearchBar';
-import Offers from '../components/Offers'; // Fixed typo from Offers to Offers
+import Offers from '../components/Offers'; 
 import PopularHotels from '../components/PopularHotels';
 import Footer from '../components/Footer';
 import '../Styles/HomePage.css';
+// import '../Styles/Header.css';
+// import '../Styles/Footer.css';
 
 const Homepage = () => {
   const [hotels, setHotels] = useState([]);
@@ -26,7 +28,7 @@ const Homepage = () => {
                 adults: '1'
             },
             headers: {
-                'x-rapidapi-key': 'YOUR_RAPIDAPI_KEY', // Replace with your actual key
+                'x-rapidapi-key': 'REACT_APP_HOTEL_API_KEY',
                 'x-rapidapi-host': 'airbnb19.p.rapidapi.com'
             }
         };
@@ -48,6 +50,7 @@ return (
       <Header />
       <main>
           <SearchBar />
+          
           <Offers />
           <PopularHotels />
           <section className="hotel-list">
@@ -68,13 +71,12 @@ return (
           </section>
 
           <section className="why-travel-ease-container">
-              <span className="why-travel-ease">
-                  <h1>Why TravelEase</h1>
+               <h1>Why TravelEase</h1>
                   <h3>
                       TravelEase is your ultimate travel companion, making trip planning seamless and stress-free. Whether you're looking to book a cozy hotel, rent a bike for a quick city tour, or secure a car, bus, or train for your journey, TravelEase has got you covered.
                   </h3>
                   <button className="learn-more-btn">Learn More</button>
-              </span>
+             
           </section>
       </main>
       <Footer />

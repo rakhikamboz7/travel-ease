@@ -1,101 +1,58 @@
+// SearchBar.jsx
 import React, { useState } from 'react';
-import { GoogleMap, LoadScript, Marker, Autocomplete } from '@react-google-maps/api';
+import { useNavigate } from 'react-router-dom';
 
 const SearchBar = () => {
-  const [location] = useState({ lat: 28.6139, lng: 77.2090 }); // Default location for the map
-  const [selectedLocation, setSelectedLocation] = useState(null);
-  const [bookingType, setBookingType] = useState('');
-  const [checkInDate, setCheckInDate] = useState('');
-  const [checkOutDate, setCheckOutDate] = useState('');
-  const [travelers, setTravelers] = useState('');
-  const [rooms, setRooms] = useState('');
+  const [searchParams, setSearchParams] = useState({
+    name: '',
+    location: ''
+  });
+  const navigate = useNavigate();
 
-  const handleBookingType = (type) => {
-    setBookingType(type);
-  };
-
-  const handleMapClick = (e) => {
-    setSelectedLocation({
-      lat: e.latLng.lat(),
-      lng: e.latLng.lng(),
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    // Navigate to hotels list page with search params
+    navigate('/hotels', { 
+      state: { 
+        name: searchParams.name, 
+        location: searchParams.location 
+      } 
     });
   };
 
-  const handlePlaceSelected = (autocomplete) => {
-    const place = autocomplete.getPlace();
-    if (place.geometry) {
-      const { lat, lng } = place.geometry.location;
-      setSelectedLocation({
-        lat: lat(),
-        lng: lng(),
-      });
-    }
-  };
-
   return (
-    <div className="searchbar-container">
-      <div className="searchbar-buttons">
-        <button onClick={() => handleBookingType('Hotel')}>Hotels</button>
-        <button onClick={() => handleBookingType('Bus')}>Bus</button>
-        <button onClick={() => handleBookingType('Cabs')}>Cabs</button>
-        <button onClick={() => handleBookingType('Trains')}>Trains</button>
-      </div>
-
-      <div className="searchbar-fields">
-        {bookingType === 'Hotel' && (
-          <>
-            <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
-              <Autocomplete onPlaceChanged={() => handlePlaceSelected(this.autocomplete)} onLoad={autocomplete => this.autocomplete = autocomplete}>
-                <input type="text" placeholder="Destination" />
-              </Autocomplete>
-            </LoadScript>
-
-            <input
-              type="date"
-              placeholder="Check In"
-              value={checkInDate}
-              onChange={(e) => setCheckInDate(e.target.value)}
-            />
-            <input
-              type="date"
-              placeholder="Check Out"
-              value={checkOutDate}
-              onChange={(e) => setCheckOutDate(e.target.value)}
-            />
-            <input
-              type="number"
-              placeholder="Travelers"
-              value={travelers}
-              min="1"
-              max="100"
-              onChange={(e) => setTravelers(e.target.value)}
-            />
-            <input
-              type="number"
-              placeholder="Rooms"
-              value={rooms}
-              min="1"
-              max="100"
-              onChange={(e) => setRooms(e.target.value)}
-            />
-          </>
-        )}
-      </div>
-
-      <div style={{ height: '400px', width: '100%', marginTop: '60px' }}>
-        <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
-          <GoogleMap
-            mapContainerStyle={{ height: '400px', width: '100%' }}
-            zoom={10}
-            center={location}
-            onClick={handleMapClick}
-          >
-            {selectedLocation && <Marker position={selectedLocation} />}
-          </GoogleMap>
-        </LoadScript>
-      </div>
+    <div className="search-container">
+      <form onSubmit={handleSearchSubmit}>
+        <div className="search-inputs">
+          <input
+            type="text"
+            placeholder="Search by hotel name"
+            value={searchParams.name}
+            onChange={(e) => setSearchParams(prev => ({
+              ...prev,
+              name: e.target.value
+            }))}
+            className="search-input"
+          />
+          <input
+            type="text"
+            placeholder="Search by location"
+            value={searchParams.location}
+            onChange={(e) => setSearchParams(prev => ({
+              ...prev,
+              location: e.target.value
+            }))}
+            className="search-input"
+          />
+          <button type="submit" className="search-button">
+            Search Hotels
+          </button>
+        </div>
+      </form>
     </div>
   );
 };
 
 export default SearchBar;
+
+ 
